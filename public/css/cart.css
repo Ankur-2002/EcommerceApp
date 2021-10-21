@@ -1,0 +1,29 @@
+.cart-item {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cart-item-list {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 15px;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  width: 75%;
+  margin-bottom: 10px;
+}
+.cart-item-list :first-child {
+  width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.order {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}

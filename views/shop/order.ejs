@@ -1,0 +1,23 @@
+<%- include('../includes/head.ejs') %>
+    </head>
+
+    <body>
+        <%- include('../includes/navigation.ejs') %>
+        <main>
+            <% order.forEach(item => { %> 
+            <ul class="orders"> 
+                <div class="orderId"> 
+                    <h3>OrderID: #<%= item._id %> </h3>    
+                    <a style="text-decoration: none; color: blue;" href="/orders/<%=item._id %>">Invoice</a>
+                </div>
+                <% item.product.forEach(element => { %>
+                <li>
+                    <div>Title :<%= element.product.title %></div> 
+                    <!-- <img src=<%= element.product.imageUrl %> >  -->
+                </li> 
+                <% }); %> 
+            </ul>
+           <% }); %> 
+        
+        </main>
+        <%- include('../includes/end.ejs') %>
